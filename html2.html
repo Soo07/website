@@ -97,7 +97,19 @@ window.fbAsyncInit = function() {
 					<button type="submit" class="btn waves-effect waves-light col s12">로그인</button>
 				  </div>
 				  <div class="input-field col s12">
-					<input type="button" id="authBtn" value="checking...">
+					<input type="button" id="authBtn" value="checking..." onclick="
+						if(this.value === 'Login'){
+							// now Logout
+							FB.login(function(res){
+								console.log('login =>', res);
+							});
+						} else {
+							// now login
+							FB.logout(function(res){
+								console.log('logout =>', res);
+							});
+						}
+					">
 				  </div>
 				</div>
 				
