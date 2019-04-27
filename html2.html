@@ -14,10 +14,11 @@
 		<link href="css/19TOTY.css" rel="stylesheet">
 
         <script>
-var checkLoginStatus = function(response) {
+
+				var checkLoginStatus = function(response) {
          console.log(response);
          //statusChangeCallback(response);
-         if(response.status === ' connected'){
+         if(response.status === 'connected'){
             document.querySelector('#authBtn').value = 'Logout';
          } else {
             document.querySelector('#authBtn').value = 'Login';
@@ -26,7 +27,7 @@ var checkLoginStatus = function(response) {
 
 window.fbAsyncInit = function() {
     FB.init({
-      appId      : '614029082433760',
+      appId      : '852838628408074',
       cookie     : true,  // enable cookies to allow the server to access 
                           // the session
       xfbml      : true,  // parse social plugins on this page
