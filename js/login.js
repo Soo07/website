@@ -4,7 +4,7 @@ var checkLoginStatus = function(response) {
     if(response.status === 'connected'){
        document.querySelector('#authBtn').value = 'Logout';
     } else {
-       document.querySelector('#authBtn').value = 'Login';
+       document.querySelector('#authBtn').value = '페이스북 로그인';
     }
  }
 
