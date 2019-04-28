@@ -53,9 +53,16 @@
 					<button type="submit" class="btn waves-effect waves-light col s12"><a href="wificonnect.html"></a>로그인</button>
 				  </div>
 				  <div class="input-field col s12">
-					<input type="button" id="authBtn" value="checking..." style="font-size:14px; height:37px; width:260px; text-align:center; border-radius: 5px; margin-left:-1px; border-style:none; background-color: rgb(30, 45, 255); color:white;" onclick="
-						if(this.value === 'Login'){
+					<input type="button" id="authBtn" value="checking..."  
 					style="font-size: 14px;
+					height: 37px;
+					width: 260px;
+					text-align: center;
+					border-radius: 5px;
+					margin-left: -1px;
+					border-style: none;
+					background-color: rgb(30, 45, 255);
+					color: white; "onclick="
 						if(this.value === '페이스북 로그인'){
 							// now Logout
 							FB.login(function(res){
