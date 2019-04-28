@@ -2,9 +2,9 @@ var checkLoginStatus = function(response) {
     console.log(response);
     //statusChangeCallback(response);
     if(response.status === 'connected'){
-       document.querySelector('#authBtn').value = 'Logout';
+       document.querySelector('#authBtn').value = '로그아웃';
     } else {
-       document.querySelector('#authBtn').value = 'Login';
+       document.querySelector('#authBtn').value = 'facebook 로그인';
     }
  }
 
