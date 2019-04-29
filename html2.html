@@ -8,10 +8,9 @@
 <title>
     19TOTY main
 </title>
-		<link href="css/materialize.css" rel="stylesheet">
-        <link href="css/materialize.min.css" rel="stylesheet">
 		<link href="css/gg.css" rel="stylesheet">
 		<link href="css/19TOTY.css" rel="stylesheet">
+		<link href="css/materialize.css" rel="stylesheet">
 </head>
 
 <body>
@@ -30,68 +29,63 @@
 		</div>		
 	</div>
 	<div class="user_section">
-		<div id="login-page" class="row">
-                <form class="login-form">
-				<div class="row margin">
-				  <div class="input-field col s12">
-					<i class="mdi-social-person-outline prefix"></i>
-					<!-- <i class="material-icons prefix">account_circle</i> -->
-					<input id="username" name="username" type="text" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;); cursor: auto;"/>
-                    <label for="username" data-error="wrong" class="center-align" data-success="right">Username</label>     
-				  </div>
+			<div id="login-page" class="row">
+					<div class="col s12 z-depth-4 card-panel" style="margin-top:0px;">
+						<form class="login-form">
+							<div class="row margin">
+								<div class="input-field col s12">
+									<!-- <i class="mdi-social-person-outline prefix"></i> -->
+									<img class="login_img" src="img/login_img.png"/>
+									
+									<input id="username" name="username" type="text" style="width:85%; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;); cursor: auto;"/>
+									<label for="username" data-error="wrong" class="center-align" data-success="right">Username</label>            
+								</div>
+							</div>
+							<div class="row margin">
+								<div class="input-field col s12">
+									<!-- <i class="mdi-action-lock-outline prefix"></i> -->
+									<img class="login_img" src="img/login_img.png"/>
+									<input id="password" name="password" type="password" style="width:85%; background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);"/>
+									<label for="password">Password</label>
+								</div>
+							</div>
+							
+							<div class="row">
+								<div class="input-field col s12">
+									<button type="submit" class="btn waves-effect waves-light col s12">Login</button>
+								</div>
+								<div class="input-field col s12">
+										<input type="button" id="authBtn" value="checking..."  
+										style="font-size: 14px;
+										height: 36px;
+										width: 280px;
+										text-align: center;
+										border-radius: 2px;
+										margin-left: -1px;
+										border-style: none;
+										background-color: rgb(30, 45, 255);
+										color: white; "onclick="
+											if(this.value === 'facebook 로그인'){
+												// now Logout
+												FB.login(function(res){
+													console.log('login =>', res);
+													checkLoginStatus(res);
+												});
+											} else {
+												// now login
+												FB.logout(function(res){
+													console.log('logout =>', res);
+													checkLoginStatus(res);
+												});
+											}
+										">
+										</div>
+							</div>
+							
+						</form>
+					</div>
 				</div>
-				<div class="row margin">
-				  <div class="input-field col s12">
-					<i class="mdi-action-lock-outline prefix"></i>
-					<input id="password" name="password" type="password" style="background-image: url(&quot;data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAAEAAAABCAQAAAC1HAwCAAAAC0lEQVR4nGP6zwAAAgcBApocMXEAAAAASUVORK5CYII=&quot;);"/>
-					<label for="password">Password</label>
-				  </div>
-				</div>
-				
-				<div class="row">
-				  <div class="input-field col s12">
-					<button type="submit" class="btn waves-effect waves-light col s12"><a href="wificonnect.html"></a>로그인</button>
-				  </div>
-				  <div class="input-field col s12">
-					<input type="button" id="authBtn" value="checking..."  
-					style="font-size: 14px;
-					height: 36px;
-					width: 259px;
-					text-align: center;
-					border-radius: 2px;
-					margin-left: -1px;
-					border-style: none;
-					background-color: rgb(30, 45, 255);
-					color: white; "onclick="
-						if(this.value === 'facebook 로그인'){
-							// now Logout
-							FB.login(function(res){
-								console.log('login =>', res);
-								checkLoginStatus(res);
-							});
-						} else {
-							// now login
-							FB.logout(function(res){
-								console.log('logout =>', res);
-								checkLoginStatus(res);
-							});
-						}
-					">
-				  </div>
-				</div>
-				
-				<div class="row">
-				  <div class="input-field col s6 m6 l6">
-					<p class="margin medium-small"><a href="page-register.html">Register Now!</a></p>
-				  </div>
-				  <div class="input-field col s6 m6 l6">
-					  <p class="margin right-align medium-small"><a href="page-forgot-password.html">Forgot password ?</a></p>
-				  </div>          
-				</div>
-			  </form>
-			</div>
-		  </div>
-		</div>
+	</div>
 		
 		<script src="js/materialize.js"></script>
         <script src="js/materialize.min.js"></script>
