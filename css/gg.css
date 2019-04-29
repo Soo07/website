@@ -21,6 +21,7 @@ html, body {
 
 .login-form {
     width: 280px;
+    padding-top:15px;
 }
 
 .login-form-text {
