@@ -5,7 +5,7 @@
 
 // Global variables
 var client = null;
-var led_is_on = 0;
+var pump_is_on = 0;
 // These are configs
 var hostname = "broker.mqtt-dashboard.com";
 var port = "8000";
@@ -74,20 +74,29 @@ function onMessageArrived(message) {
     var watertemp_heading = document.getElementById("Watertemp_Display");
     watertemp_heading.innerHTML = "Water Temperature : " + data.water_temp + " &deg;C";
 
-    if (data.Led == 1) {
-        led_is_on = 1;
+    var dust_heading = document.getElementById("dust_Display");
+
+        if(data.dust == 1) {
+            dust_heading.innerHTML = "Dust : Clean";
+        }
+        else {
+            dust_heading.innerHTML = "Dust : Dirty";
+        }
+
+    if (data.pump == 1) {
+        pump_is_on = 1;
     } else {
-        led_is_on = 0;
+        pump_is_on = 0;
     }
 }
 
-function led_toggle() {
-    if (led_is_on == 1) {
-        var payloadString = '{"Led" : "OFF"}';
-        led_is_on = 0;
+function pump_toggle() {
+    if (pump_is_on == 1) {
+        var payloadString = '{"pump" : "OFF"}';
+        pump_is_on = 0;
     } else {
-        var payloadString = '{"Led" : "ON"}';
-        led_is_on = 1;
+        var payloadString = '{"pump" : "ON"}';
+        pump_is_on = 1;
     }
     // Send messgae
     message = new Paho.MQTT.Message(payloadString);
@@ -96,3 +105,4 @@ function led_toggle() {
     client.send(message);
     console.info('sending: ', payloadString);
 }
+
