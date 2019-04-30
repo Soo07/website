@@ -1,0 +1,81 @@
+		input {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+					appearance: none;
+		}
+
+		/* IE10 이상에서 input box 에 추가된 지우기 버튼 제거 */
+		input::-ms-clear { display: none; }
+
+		/* input type number 에서 화살표 제거 */
+		input[type=number]::-webkit-inner-spin-button,
+		input[type=number]::-webkit-outer-spin-button {
+			-webkit-appearance: none;
+			-moz-appearance: none;
+					appearance: none;
+		}
+		*{margin:0;padding:0;text-decoration:none;list-style:none;}
+		a{
+			color:black;
+		}
+		.main_section{
+			width:100%;
+			margin:0 auto;
+			text-align:center;
+			background-color:#2E4658;
+		}
+		.logo_box{
+			padding-top	:40px;
+			padding-bottom:15px;
+		}
+		.logo_title{
+			width:100%;
+			font-size:40px;
+			color:#FFFFFF;
+			font-weight:500;
+			margin-bottom:20px;
+		}
+		.sub_title{
+			font-size:18px;
+			color:rgb(72, 157, 230);
+			font-weight:500;
+		}
+		.add_title{
+			font-size:23px;
+			color:#FFFFFF;
+		}
+		
+		.user_section{
+			width:100%;
+			margin:0px auto;
+			text-align:center;			
+		}
+		.user_img{
+			width:60px;
+			height:60px;
+			margin:20px auto 0px;
+			background-color:#9D9C9D;
+			border-radius:30px;
+		}
+		.user_img img{
+			width:40px;
+			height:40px;
+			margin-top:8px;
+		}
+		.user_id{
+			font-size:14px;
+			margin-top:3px;
+		}
+		.connect_btn{
+			width: 280px;
+			height: 30px;
+			background-color: rgb(224, 224, 224);
+			border-radius: 5px;
+			margin: 15px auto;
+			padding-top: 10px;
+		}
+
+		.login_img{
+			float:left;
+			margin-top:10px;
+		}
